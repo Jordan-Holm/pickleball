@@ -3,5 +3,5 @@ class Game < ApplicationRecord
 
   has_many :teams, dependent: :destroy
 
-  validates :placements, :time, presence: true
+  validates :placements, :gtime, presence: true
 end

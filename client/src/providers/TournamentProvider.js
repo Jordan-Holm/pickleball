@@ -37,7 +37,7 @@ const TournamentProvider = ({ children }) => {
     axios.put(`/api/tournaments/${id}`, { tournament })
       .then( res => {
         const newUpdatedTournaments = tournaments.map( c => {
-          if (c.id == id) {
+          if (c.id === id) {
             return res.data 
           }
           return c 
@@ -56,7 +56,7 @@ const TournamentProvider = ({ children }) => {
   const deleteTournament = (id) => {
     axios.delete(`/api/tournaments/${id}`)
       .then(res => {
-        setCats(tournaments.filter(c => c.id !== id))
+        setTournaments(tournaments.filter(c => c.id !== id))
       })
       .catch(err => {
         setErrors({ 
