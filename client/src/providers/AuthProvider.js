@@ -31,6 +31,7 @@ const AuthProvider = ({ children }) => {
             .then( res => {
                 setUser(null)
                 navigate('/login')
+                window.location.reload()
             })
             .catch( err => {
                 console.log(err)

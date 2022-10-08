@@ -12,7 +12,7 @@ const GameForm = ({ addGame, setAdd, updateGame, errors, setErrors }) => {
   useEffect( () => {
     if (id) {
       const { placements, gtime } = location.state 
-      setGame({ placement, gtime })
+      setGame({ placements, gtime })
     }
   }, [])
 

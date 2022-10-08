@@ -27,7 +27,7 @@ const Login = ({ handleLogin, errors, setErrors }) => {
                     type='email'
                     name='email'
                     value={user.email}
-                    onChange={ (e) => setUser({ ...user, eamil: e.target.value })}
+                    onChange={ (e) => setUser({ ...user, email: e.target.value })}
                     required
                     placeholder="Email"
                 />

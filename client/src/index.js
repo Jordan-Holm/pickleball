@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import AuthProvider from './providers/AuthProvider';
 import TournamentProvider from './providers/TournamentProvider';
+import GameProvider from './providers/GameProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,9 @@ root.render(
     <BrowserRouter>
       <AuthProvider>
         <TournamentProvider>
-          <App />
+          <GameProvider>
+            <App />
+          </GameProvider>
         </TournamentProvider>
       </AuthProvider>
     </BrowserRouter>
