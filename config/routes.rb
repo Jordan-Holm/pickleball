@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
     resources :games do
       resources :teams
+    end
   end
   # Defines the root path route ("/")
   # root "articles#index"
