@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 
-const Mainnavbar = () => (
+import { AuthConsumer } from '../../providers/AuthProvider';
+
+
+const Mainnavbar = (user, handleLogout) => (
 
     // <nav>
     //         <h1>PICKLE BALL APP</h1>
@@ -28,10 +31,18 @@ const Mainnavbar = () => (
                  >
                     <Navbar.Brand>Login</Navbar.Brand>
                 </Link>
-        
+                <Button onClick={() => handleLogout() }>
+                    <Navbar.Brand>Logout</Navbar.Brand>
+                </Button>
             
             </Container>
         </Navbar>
 )
 
-export default Mainnavbar;
+const ConnectedMainNavbbar = (props) => (
+    <AuthConsumer>
+        { value => <Mainnavbar {...props} {...value} />}
+    </AuthConsumer>
+)
+
+export default ConnectedMainNavbbar;

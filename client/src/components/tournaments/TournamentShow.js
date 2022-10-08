@@ -26,7 +26,7 @@ const TournamentShow = ({ id, tname, division, when, where, gender }) => {
         </ListGroup>
         <Card.Body>
           <Card.Link>
-            <Link to={`/tournaments/${id}`}>
+            <Link to={`/${id}/game`}>
               <Button>
                 View
               </Button>

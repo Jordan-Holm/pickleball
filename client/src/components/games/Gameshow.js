@@ -1,9 +1,9 @@
-import { Card, Button, ListGroup, Container, Row, Col } from 'react-bootstrap';
-import { GameConsumer } from '../../providers/TournamentProvider';
+import { Card, Button, ListGroup } from 'react-bootstrap';
+import { GameConsumer } from '../../providers/GameProvider';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const GameShow = ({ id, placements, gtime, tournament_id }) => {
+const GameShow = ({ id, placements, gtime, tournamentId }) => {
   const [showing, setShow] = useState(false)
 
   return (
@@ -20,17 +20,17 @@ const GameShow = ({ id, placements, gtime, tournament_id }) => {
         <ListGroup 
           className='list-group-flush'
         >
-          <ListGroup.Item>{tournament_id}</ListGroup.Item>
+          <ListGroup.Item>{tournamentId}</ListGroup.Item>
           
         </ListGroup>
         <Card.Body>
-          <Card.Link>
+          {/* <Card.Link>
             <Link to={`/tournaments/${id}`}>
               <Button>
                 View
               </Button>
             </Link>
-          </Card.Link>
+          </Card.Link> */}
         </Card.Body>
       </Card>
     </>

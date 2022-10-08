@@ -1,13 +1,14 @@
-import GameShow from './GameShow';
+import GameShow from './Gameshow';
 import { Container, Row, Col } from 'react-bootstrap';
 
-const GameList = ({ games }) => (
+const GameList = ({ games, tournamentId }) => (
   <Container>
     <Row md='4' sm='12'>
       { games.map( g => 
         <Col key={g.id}>
           <GameShow
             {...g}
+            tournamentId={tournamentId}
           />
         </Col>
       )}

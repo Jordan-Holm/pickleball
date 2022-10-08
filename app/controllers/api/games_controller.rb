@@ -38,7 +38,7 @@ class Api::GamesController < ApplicationController
     end
 
     def set_parent
-      @tour = Tournament.find(params[:tournament_id]
+      @tour = Tournament.find(params[:tournament_id])
     end
 
     def set_games

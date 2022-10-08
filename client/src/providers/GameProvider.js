@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { TournamentConsumer } from "./TournamentProvider";
 
 export const GameContext = React.createContext();
 export const GameConsumer = GameContext.Consumer;
@@ -11,7 +10,7 @@ export const GameConsumer = GameContext.Consumer;
 const GameProvider = ({ children }) => {
     const [games, setGames] = useState([])
     const [errors, setErrors] = useState(null)
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const getAllGames = (tournamentId) => {
         axios.get(`/api/tournaments/${tournamentId}/games`)
