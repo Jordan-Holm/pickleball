@@ -34,7 +34,7 @@ class Api::GamesController < ApplicationController
 
   private
     def game_params
-      params.require(:game).permit(:placements, :time)
+      params.require(:game).permit(:placements, :gtime)
     end
 
     def set_parent

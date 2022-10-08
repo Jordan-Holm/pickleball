@@ -1,8 +1,7 @@
-import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+import { Card, Button, ListGroup, Container, Row, Col } from 'react-bootstrap';
 import { TournamentConsumer } from '../../providers/TournamentProvider';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ConnectedTournamentShow from './TournamentForm';
 
 const TournamentShow = ({ id, tname, division, when, where, gender }) => {
   const [showing, setShow] = useState(false)

@@ -1,4 +1,4 @@
-class Api::TournamentController < ApplicationController
+class Api::TournamentsController < ApplicationController
  before_action :set_tour, only: [:show, :update, :destroy]
   def index
     render json: Tournament.all
